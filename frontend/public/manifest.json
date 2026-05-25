@@ -1,0 +1,17 @@
+{
+  "name": "RPA — Report Problem Assistant",
+  "short_name": "RPA",
+  "description": "Reporte problemas de acessibilidade urbana para equipes de manutenção.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
