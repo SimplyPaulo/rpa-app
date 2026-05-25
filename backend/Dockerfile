@@ -4,7 +4,7 @@
 #  Stage 2: Run it in a lightweight runtime image
 # ══════════════════════════════════════════════════════════
 
-FROM mcr.microsoft.com/dotnet/sdk:9.0-jammy AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0-noble AS build
 WORKDIR /src
 
 # Copy project file and restore dependencies
@@ -16,7 +16,7 @@ COPY RPA.API/ ./RPA.API/
 RUN dotnet publish ./RPA.API/RPA.API.csproj -c Release -o /app/publish
 
 # ── Runtime Stage ─────────────────────────────────────────
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-jammy AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble AS runtime
 WORKDIR /app
 
 COPY --from=build /app/publish .
